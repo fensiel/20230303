@@ -1,0 +1,111 @@
+.content li{
+    /* float 왼쪽 오른쪽으로 붙여서 정렬 시킬수있다. */
+    float: left;
+    /* ul li 태그를 사용하면서 리스의 점이나 숫자 리스트의 형식을 지정할수있다. */
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+}
+
+.main{
+    width: 1260px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* margin: auyo 좌우 여백이 동일하게 맞춰진다. */
+}
+
+.content {
+    /* 자식 태그의 내용만큼 너비를 가지게 */
+    width: max-content; 
+    padding: 0;
+}
+
+.content li :last-child{
+
+    width: 290px;
+    height:194px;
+}
+
+    /* content 클래스를 가진 태그의 자식 li 태그의 자식 item-ing 클래스를 가진
+    태그만 스타일을 적용시킨다.
+    li태그 안쪽으로 자식이면 스타일이 적용된다. */
+
+}
+
+/* 어떤 태그의 자식이든 item-ing 클래스를 가지고 있는 태그에 스타일을 적용시킨다. */
+.content li div .item-ing{
+    width: 100px;
+    height:150px;
+    border-radius: 10px
+
+}
+
+.item{
+    position: relative
+    border: 1px solid;
+    width: 290px;
+    height: 277px;
+    margin-right: 20px;
+}
+
+.content li:last-child .item
+
+.item:last-child{
+    margin-right: 0;
+}
+.item:first-child{}
+.sub-tag{
+    position:absolute;
+
+    background-color: black;
+    color: white;
+    display: none;
+    font-size: 85px;
+    width: 225px;
+    text-align: center;
+
+}
+/* 가상 선택자 */
+/* hover 속성 마우스가 태그 올려졌을때 */
+/* item 태그에 마우스가 올려졌을때 자식 태그중 sub-tag클래스를 가지고 있는 태그가 스타일이 적용된다. */
+.item:hover .sub-tag{
+    display: block;
+}
+    color: red;
+}
+
+.tilte{
+
+    width: 250px;
+    font-size: 14px;
+    margin-left: 50px;
+    margin-top: 5px;
+    /* 줄바꿈 속성을 없애준다. 한줄로 텍스트를 만들어준다. */
+    white-space: nowrap;
+
+    /* 부모보다 자식 태그가 너미면 지워버림 */
+    overflow : hidden;
+
+    /* 텍스트가 부모 태그의 넓이보다 길어지면 점점점 처리 */
+    text-overflow: ellipsis
+
+}
+
+.sub-title{
+
+}
+
+/* before 가상 요소를 추가해줄수 있다. */
+/* content 속성이 있어야 한다 꼭 */
+.sub-title span:before{
+    content:"."
+
+}
+
+.sub-title span::after{
+    content: ""
+}
